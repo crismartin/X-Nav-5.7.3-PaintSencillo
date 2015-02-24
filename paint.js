@@ -8,6 +8,7 @@ function canvasApp(){
 
     /* Inicializamos el valor del color */
 	var colorChosen = document.getElementById("color_chosen");
+	var brochaChosen = document.getElementById("brocha_chosen");
 
     /* Tomamos los botones de colores por su id */
 	var redButton = document.getElementById("Red");
@@ -15,12 +16,21 @@ function canvasApp(){
 	var blueButton = document.getElementById("Blue");
 	var blackButton = document.getElementById("Black");
 	var whiteButton = document.getElementById("White");
+	var brocha_s = document.getElementById("brocha_s");
+	var brocha_m = document.getElementById("brocha_m");
+	var brocha_l = document.getElementById("brocha_l");
+	
     /* Asociamos función colorPressed a pulsación de botón */
     redButton.addEventListener('click', colorPressed, false);
     greenButton.addEventListener('click', colorPressed, false);
     blueButton.addEventListener('click', colorPressed, false);
     blackButton.addEventListener('click', colorPressed, false);
     whiteButton.addEventListener('click', colorPressed, false);
+    
+    brocha_s.addEventListener('click', brochaPressed, false);
+    brocha_m.addEventListener('click', brochaPressed, false);
+    brocha_l.addEventListener('click', brochaPressed, false);
+    
 
     function colorPressed(e) {
 	  var color_button_selected = e.target;
@@ -28,8 +38,14 @@ function canvasApp(){
 	  colorChosen.innerHTML = color_id;
     }
 
+    function brochaPressed(e) {
+	  var brocha_button_selected = e.target;
+	  var brocha_id = brocha_button_selected.getAttribute('id');
+	  brochaChosen.innerHTML = brocha_id;
+    }
+    
     /* Botón de reseteo */
-	var resetButton = document.getElementById("reset_image");
+    var resetButton = document.getElementById("reset_image");
     resetButton.addEventListener('click', resetPressed, false);
 
     /* Asociamos función colorPressed a pulsación de botón */

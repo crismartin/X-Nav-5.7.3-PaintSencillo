@@ -21,6 +21,28 @@ input {
 
 #Black {
   background-color: black;
+  
+}
+
+#brocha_s {
+  background-color: black;
+  width: 10px;
+  height: 15px;
+  
+}
+
+#brocha_m {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  
+}
+
+#brocha_l {
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  
 }
 
 canvas {
